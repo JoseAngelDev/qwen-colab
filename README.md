@@ -10,10 +10,10 @@ Haz clic en cualquiera de los botones para abrir el notebook directamente en Goo
 
 | Opción | Motor | Descripción | Enlace |
 | :--- | :--- | :--- | :--- |
-| **Opción A (Recomendada)** | **vLLM** | Máximo rendimiento (PagedAttention), streaming ultra rápido, compatible con API de OpenAI y Chat Gradio integrado. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPO/blob/main/notebooks/qwen_vllm_inference.ipynb) |
-| **Opción B** | **Ollama** | Ecosistema Ollama clásico con CLI (`ollama run/pull`) y túnel público. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPO/blob/main/notebooks/qwen_ollama_inference.ipynb) |
+| **Opción A (Recomendada)** | **vLLM** | Máximo rendimiento (PagedAttention), streaming ultra rápido, compatible con API de OpenAI y Chat Gradio integrado. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseAngelDev/qwen-colab/blob/main/notebooks/qwen_vllm_inference.ipynb) |
+| **Opción B** | **Ollama** | Ecosistema Ollama clásico con CLI (`ollama run/pull`) y túnel público. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseAngelDev/qwen-colab/blob/main/notebooks/qwen_ollama_inference.ipynb) |
 
-> 💡 **Nota**: Sustituye `TU_USUARIO/TU_REPO` por tu usuario y nombre de repositorio en GitHub.
+> 💡 **Nota**: Los botones están vinculados al repositorio `JoseAngelDev/qwen-colab`.
 
 ---
 
