@@ -1,6 +1,6 @@
-# ⚡ Qwen Inferencia On-Cloud con Google Colab Pro
+# ⚡ Qwen 3.8 & GLM Inferencia On-Cloud con Google Colab Pro
 
-Repositorio listo para desplegar inferencia rápida de la familia **Qwen 2.5** (modelos generales y **Qwen2.5-Coder**) en GPUs de **Google Colab Pro**, exponiendo una API pública compatible con OpenAI y una interfaz web con 1 solo clic.
+Repositorio listo para desplegar inferencia rápida de modelos de última generación y sin censura (**Abliterated / Cybersecurity**) como **Huihui-Qwen3.8-27B**, **SC117 Qwen3.8 Flash-Next** y **GLM-5.3** en GPUs de **Google Colab Pro**, exponiendo una API pública compatible con OpenAI y una interfaz web con 1 solo clic.
 
 ---
 
@@ -8,10 +8,10 @@ Repositorio listo para desplegar inferencia rápida de la familia **Qwen 2.5** (
 
 Haz clic en cualquiera de los botones para abrir el notebook directamente en Google Colab:
 
-| Opción | Motor | Descripción | Enlace |
+| Opción | Motor | Modelos Preconfigurados | Enlace |
 | :--- | :--- | :--- | :--- |
-| **Opción A (Recomendada)** | **vLLM** | Máximo rendimiento (PagedAttention), streaming ultra rápido, compatible con API de OpenAI y Chat Gradio integrado. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseAngelDev/qwen-colab/blob/main/notebooks/qwen_vllm_inference.ipynb) |
-| **Opción B** | **Ollama** | Ecosistema Ollama clásico con CLI (`ollama run/pull`) y túnel público. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseAngelDev/qwen-colab/blob/main/notebooks/qwen_ollama_inference.ipynb) |
+| **Opción A (Recomendada)** | **vLLM** | • `huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF`<br>• `SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF`<br>• `dealignai/GLM-5.3-CYBERSECURITY-FP8` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseAngelDev/qwen-colab/blob/main/notebooks/qwen_vllm_inference.ipynb) |
+| **Opción B** | **Ollama** | • `hf.co/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF:Q4_K_M`<br>• `hf.co/SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF:Q2_0` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseAngelDev/qwen-colab/blob/main/notebooks/qwen_ollama_inference.ipynb) |
 
 > 💡 **Nota**: Los botones están vinculados al repositorio `JoseAngelDev/qwen-colab`.
 
@@ -19,22 +19,20 @@ Haz clic en cualquiera de los botones para abrir el notebook directamente en Goo
 
 ## 🎯 ¿Qué permite este setup?
 
-1. **Aprovechar las GPUs de Colab Pro**: Utiliza GPUs de nivel servidor (**NVIDIA A100**, **L4** o **T4**) para ejecutar modelos de 7B, 14B o 32B sin consumir recursos de tu ordenador local.
-2. **Endpoint Público Gratuito (Cloudflare Tunnel)**: Sin necesidad de crear cuentas en ngrok ni configurar routers; genera una URL segura `https://xxxx.trycloudflare.com/v1`.
-3. **Compatibilidad Total con OpenAI**: Conecta cualquier cliente local (Cursor, VS Code con Continue, LibreChat, Open WebUI, LangChain, LlamaIndex o scripts de Python).
-4. **Web UI Inmediata**: Incluye interfaz gráfica de chat con **Gradio** en el propio Colab o con enlace público compartible.
+1. **Modelos Modernos Abliterated y de Ciberseguridad**: Diseñado para correr `Qwen3.8 27B` y variantes afinadas por la comunidad.
+2. **Aprovechar GPUs de Colab Pro**: Utiliza GPUs de nivel servidor (**NVIDIA A100** o **L4**) para mover modelos de 27B parámetros con fluidez.
+3. **Endpoint Público Gratuito (Cloudflare Tunnel)**: Genera una URL segura `https://xxxx.trycloudflare.com/v1` lista para conectar a Cursor, VS Code, LibreChat o Python.
+4. **Web UI Inmediata**: Incluye interfaz de chat con **Gradio** en el propio Colab o con enlace compartible.
 
 ---
 
-## 🧠 Guía de VRAM y Modelos en Colab Pro
+## 🧠 Compatibilidad de Modelos en Colab Pro
 
-Según la GPU que selecciones en Colab (*Entorno de ejecución > Cambiar tipo de entorno de ejecución*):
-
-| GPU en Colab | VRAM Disponible | Modelos Recomendados |
-| :--- | :--- | :--- |
-| **T4** (Básica) | ~15-16 GB | • `Qwen/Qwen2.5-7B-Instruct`<br>• `Qwen/Qwen2.5-Coder-7B-Instruct`<br>• `Qwen/Qwen2.5-14B-Instruct-AWQ` *(contexto 4k)* |
-| **L4** (Recomendada Colab Pro) | ~22-24 GB | • `Qwen/Qwen2.5-7B-Instruct` *(velocidad extrema)*<br>• `Qwen/Qwen2.5-14B-Instruct-AWQ`<br>• `Qwen/Qwen2.5-Coder-14B-Instruct-AWQ` |
-| **A100** (Premium Colab Pro) | ~40 GB / 80 GB | • `Qwen/Qwen2.5-14B-Instruct` (FP16/BF16)<br>• `Qwen/Qwen2.5-32B-Instruct-AWQ`<br>• `Qwen/Qwen2.5-Coder-32B-Instruct-AWQ`<br>• `Qwen/Qwen2.5-72B-Instruct-AWQ` *(en A100 80GB)* |
+| Modelo | Formato | VRAM Requerida | GPU Recomendada en Colab | Notas |
+| :--- | :--- | :--- | :--- | :--- |
+| **Huihui-Qwen3.8-27B-abliterated** | GGUF (`Q4_K_M`) | ~16-17 GB | **L4 (24 GB)** o **A100 (40 GB)** | 🏆 **Mejor equilibrio** inteligencia / velocidad sin censura. |
+| **SC117/Qwen3.8-Flash-Next** | GGUF (`Q2_0` / `IQ3`) | ~6-10 GB | **T4 (16 GB)** o **L4 (24 GB)** | ⚡ Inferencia ultra rápida y bajo consumo de VRAM. |
+| **dealignai/GLM-5.3-CYBERSECURITY** | Safetensors FP8 | >80 GB | **A100 (80 GB)** | 🛡️ MoE masivo de ciberseguridad (requiere cluster/A100 80GB). |
 
 ---
 
@@ -87,7 +85,7 @@ Una vez ejecutada la celda del notebook en Colab, verás en la salida algo como:
 🎉 ¡TÚNEL PÚBLICO ACTIVADO CON ÉXITO!
 🌐 Base URL: https://alpha-beta-gamma.trycloudflare.com/v1
 🔑 API Key: colab-qwen-secret
-🤖 Model ID: Qwen/Qwen2.5-Coder-7B-Instruct
+🤖 Model ID: huihui-ai/Huihui-Qwen3.8-27B-abliterated
 =================================================================
 ```
 
@@ -110,7 +108,7 @@ En tu extensión o herramienta de IA local (por ejemplo **Continue.dev** en VS C
 - **Provider**: OpenAI
 - **Base URL**: `https://tu-url-de-cloudflare.trycloudflare.com/v1`
 - **API Key**: `colab-qwen-secret` (o la que hayas configurado en el notebook)
-- **Model Name**: `Qwen/Qwen2.5-Coder-7B-Instruct` (o el modelo que hayas arrancado)
+- **Model Name**: `huihui-ai/Huihui-Qwen3.8-27B-abliterated` (o el modelo que hayas arrancado)
 
 ### 3. Conectar mediante `curl`
 
@@ -119,8 +117,8 @@ curl https://tu-url-de-cloudflare.trycloudflare.com/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer colab-qwen-secret" \
   -d '{
-    "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
-    "messages": [{"role": "user", "content": "Hola Qwen, ¿cómo estás?"}],
+    "model": "huihui-ai/Huihui-Qwen3.8-27B-abliterated",
+    "messages": [{"role": "user", "content": "Hola, ¿cómo estás?"}],
     "temperature": 0.7
   }'
 ```

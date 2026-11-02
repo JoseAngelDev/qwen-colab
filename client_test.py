@@ -33,8 +33,8 @@ def parse_args():
     parser.add_argument(
         "--model",
         type=str,
-        default="Qwen/Qwen2.5-Coder-7B-Instruct",
-        help="Nombre del modelo a solicitar",
+        default="huihui-ai/Huihui-Qwen3.8-27B-abliterated",
+        help="Nombre del modelo a solicitar (se autodetecta si el servidor lo expone)",
     )
     parser.add_argument(
         "--prompt",
