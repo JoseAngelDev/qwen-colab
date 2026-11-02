@@ -11,7 +11,7 @@ Haz clic en cualquiera de los botones para abrir el notebook directamente en Goo
 | Opción | Motor | Modelos Preconfigurados | Enlace |
 | :--- | :--- | :--- | :--- |
 | **Opción A (Recomendada)** | **vLLM** | • `huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF`<br>• `SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF`<br>• `dealignai/GLM-5.3-CYBERSECURITY-FP8` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseAngelDev/qwen-colab/blob/main/notebooks/qwen_vllm_inference.ipynb) |
-| **Opción B** | **Ollama** | • `hf.co/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF:Q4_K_M`<br>• `hf.co/SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF:Q2_0` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseAngelDev/qwen-colab/blob/main/notebooks/qwen_ollama_inference.ipynb) |
+| **Opción B** | **Ollama** | • `hf.co/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF:Q4_K`<br>• `hf.co/SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF:Q2_0` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseAngelDev/qwen-colab/blob/main/notebooks/qwen_ollama_inference.ipynb) |
 
 > 💡 **Nota**: Los botones están vinculados al repositorio `JoseAngelDev/qwen-colab`.
 
@@ -30,7 +30,7 @@ Haz clic en cualquiera de los botones para abrir el notebook directamente en Goo
 
 | Modelo | Formato | VRAM Requerida | GPU Recomendada en Colab | Notas |
 | :--- | :--- | :--- | :--- | :--- |
-| **Huihui-Qwen3.8-27B-abliterated** | GGUF (`Q4_K_M`) | ~16-17 GB | **L4 (24 GB)** o **A100 (40 GB)** | 🏆 **Mejor equilibrio** inteligencia / velocidad sin censura. |
+| **Huihui-Qwen3.8-27B-abliterated** | GGUF (`Q4_K`) | ~16-17 GB | **L4 (24 GB)** o **A100 (40 GB)** | 🏆 **Mejor equilibrio** inteligencia / velocidad sin censura. |
 | **SC117/Qwen3.8-Flash-Next** | GGUF (`Q2_0` / `IQ3`) | ~6-10 GB | **T4 (16 GB)** o **L4 (24 GB)** | ⚡ Inferencia ultra rápida y bajo consumo de VRAM. |
 | **dealignai/GLM-5.3-CYBERSECURITY** | Safetensors FP8 | >80 GB | **A100 (80 GB)** | 🛡️ MoE masivo de ciberseguridad (requiere cluster/A100 80GB). |
 
